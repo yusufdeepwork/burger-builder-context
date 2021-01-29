@@ -1,6 +1,6 @@
 import React, { useContext } from "react";
 import { HamburgerContext } from "../../context/HamburgerContext";
-import products from "../../products";
+import products from "../../ingredients";
 import "./Menu.css";
 const Menu = () => {
   const {
