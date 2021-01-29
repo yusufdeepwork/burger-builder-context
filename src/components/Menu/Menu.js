@@ -1,6 +1,6 @@
 import React, { useContext } from "react";
 import { HamburgerContext } from "../../context/HamburgerContext";
-import products from "../../ingredients";
+import ingredients from "../../ingredients";
 import "./Menu.css";
 const Menu = () => {
   const {
@@ -52,17 +52,17 @@ const Menu = () => {
           Current Price: <span>$ {getCalculatedTotalPrice()}</span>
         </div>
 
-        {Object.keys(products).map((name) => (
+        {Object.keys(ingredients).map((name) => (
           <div className="menu-items">
             <div className="product-name">
               {name.charAt(0).toUpperCase() + name.slice(1)}
             </div>
-            <div className="price"> $ {products[name]} </div>
+            <div className="price"> $ {ingredients[name]} </div>
             <button
               className="menu-button decrement"
               decrement
               onClick={() =>
-                handleRemoveIngredient({ name, price: products[name] })
+                handleRemoveIngredient({ name, price: ingredients[name] })
               }
             >
               -
@@ -75,7 +75,7 @@ const Menu = () => {
               className="menu-button increment"
               increment
               onClick={() =>
-                handleAddIngredient({ name, price: products[name] })
+                handleAddIngredient({ name, price: ingredients[name] })
               }
             >
               +
