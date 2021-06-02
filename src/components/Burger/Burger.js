@@ -1,10 +1,11 @@
-import React, { useContext } from "react";
+import React, { useContext, useState } from "react";
 import { HamburgerContext } from "../../context/HamburgerContext";
 import BurgerIngredient from "../BurgerIngredient/BurgerIngredient";
 import "./Burger.css";
 
 const Burger = () => {
-  const {/* Seçilmiş ürünlerin olduğu array */} = useContext(HamburgerContext);
+
+    const {selectedIngredients} = useContext(HamburgerContext);
   return (
     <div className="wrapper">
       <div className="bread-top" />

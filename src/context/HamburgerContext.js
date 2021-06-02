@@ -17,6 +17,7 @@ const Hamburger = ({ children }) => {
     <HamburgerContext.Provider
       value={{
         selectedIngredients,
+          setSelectedIngredients,
         getCalculatedTotalPrice,
         /* Component'lere gönderilmesi istenilen state değeri */
       }}
